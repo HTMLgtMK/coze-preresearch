@@ -306,11 +306,11 @@ Idea：
 
 ### 步骤 1：创建 Coze Workflow
 
-![workflow](workflow.png)
+![workflow](image/workflow.png)
 
 #### 1.1 配置输入参数
 
-![输入节点](node_input.png)
+![输入节点](image/node_input.png)
 
 在 Workflow 设置中定义输入变量：
 
@@ -323,7 +323,7 @@ Idea：
 
 #### 1.2 设计工作流节点
 
-![node_reviewer](node_reviewer.png)
+![node_reviewer](image/node_reviewer.png)
 
 **注：以下 craft 中的，实际只用了一个 llm 节点。**
 
@@ -345,7 +345,7 @@ Idea：
 
 #### 1.3 输出节点
 
-![输出节点](node_output.png)
+![输出节点](image/node_output.png)
 
 直接取了 llm 节点的输出作为最后输出。
 
@@ -358,15 +358,15 @@ Idea：
 - 记录 API 端点地址：`https://api.coze.cn/v1/workflow/run`
 
 ---
-![workflow_id](workflow_id.png)
-![secret Token](workflow_secret.png)
+![workflow_id](image/workflow_id.png)
+![secret Token](image/workflow_secret.png)
 
 
 #### 1.6 调试 Workflow
 
 https://www.coze.cn/open/playground/workflow_run
 
-![debug_workflow](debug_workflow.png)
+![debug_workflow](image/debug_workflow.png)
 
 ### 步骤 2：配置 GitHub Actions
 
@@ -602,16 +602,16 @@ curl -s -X POST "https://api.coze.cn/v1/workflow/run" \
 
 ---
 
-![github secrets](github_secrets.png)
+![github secrets](image/github_secrets.png)
 
 </details>
 ---
 
 ### 步骤 5：效果预览
 
-当开发者提交 PR 后(https://github.com/HTMLgtMK/CRPipeline/pull/5)，会自动收到类似这样的评论：
+当开发者提交 [PR](https://github.com/HTMLgtMK/CRPipeline/pull/5) 后，会自动收到类似这样的评论：
 
-![code_review_summary](code_review_summary.png)
+![code_review_summary](image/code_review_summary.png)
 
 ---
 
@@ -640,7 +640,7 @@ curl -s -X POST "https://api.coze.cn/v1/workflow/run" \
 ❌ **security** `src/utils/auth.js:45`
 
 > 存在 SQL 注入风险，用户输入未经验证直接拼接到 SQL 语句
-
+</details>
 **💡 建议**：使用参数化查询或 ORM 的预编译语句
 
 ---
