@@ -372,6 +372,7 @@ https://www.coze.cn/open/playground/workflow_run
 
 <details>
 <summary>Github Actions Workflow</summary>
+
 #### 2.1 创建工作流文件
 
 在项目根目录创建 `.github/workflows/coze-code-review.yml`：
@@ -649,7 +650,7 @@ curl -s -X POST "https://api.coze.cn/v1/workflow/run" \
 ```
 
 对应 issue 的文件行也展示 comment：
-![code_review_line_comment](code_review_line_comment.png)
+![code_review_line_comment](image/code_review_line_comment.png)
 
 ---
 
